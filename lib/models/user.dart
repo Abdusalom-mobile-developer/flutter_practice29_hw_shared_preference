@@ -6,8 +6,8 @@ class User {
 }
 
 class FullUser {
-  String fullName, emailAddress, phoneNumber, password, confirmPassword;
+  String fullname, emailAddress, phoneNumber, password, confirmPassword;
 
-  FullUser(this.fullName, this.emailAddress, this.phoneNumber, this.password,
+  FullUser(this.fullname, this.emailAddress, this.phoneNumber, this.password,
       this.confirmPassword);
 }

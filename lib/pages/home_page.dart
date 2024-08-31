@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice29_hw1/pages/sign_up_page.dart';
 
 class HomePage extends StatefulWidget {
   static final String id = "home_page";
@@ -15,7 +14,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.blue[50],
       body: Center(
-        child: Text("Welcome home"),
+        child: Text(
+          "Welcome home",
+          style: TextStyle(
+              color: Colors.grey[800],
+              fontSize: 28,
+              fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }

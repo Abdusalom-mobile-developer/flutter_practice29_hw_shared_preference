@@ -25,6 +25,12 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     checkSignIn();
+    getResponse();
+  }
+
+  Future<void> getResponse() async {
+    final response = await Utils.getSecuredUserInfo();
+    Utils.d("Response1: ${response.toString()}");
   }
 
   Future<void> checkSignIn() async {

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice29_hw1/models/user.dart';
+import 'package:flutter_practice29_hw1/models/utils.dart';
 import 'package:flutter_practice29_hw1/pages/home_page.dart';
 import 'package:flutter_practice29_hw1/pages/login_page.dart';
 
@@ -205,7 +207,21 @@ class _SignUpPageState extends State<SignUpPage> {
                         width: MediaQuery.of(context).size.width / 2,
                         height: 55,
                         child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              FullUser securedUserInfo = FullUser(
+                                  _fullnameController.text,
+                                  _emailController.text,
+                                  _phoneNumberController.text,
+                                  _passwordController.text,
+                                  _confirmPasswordController.text);
+
+                              final json =
+                                  Utils.toJsonSecure(user: securedUserInfo);
+                              Utils.secureStoreUser(json);
+                              Navigator.pushReplacementNamed(
+                                  context, HomePage.id);
+                              Utils.storeData("signedIn", true);
+                            },
                             child: Text(
                               "Create",
                               style:
