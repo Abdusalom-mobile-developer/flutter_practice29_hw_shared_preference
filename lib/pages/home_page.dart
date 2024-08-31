@@ -13,14 +13,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[50],
       body: Center(
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, SignUpPage.id);
-          },
-          child: Text("Sign up",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-        ),
+        child: Text("Welcome home"),
       ),
     );
   }
